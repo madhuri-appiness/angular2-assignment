@@ -57,6 +57,10 @@
     transform: rotateY(180deg);
 }
 
+.alert {
+    color: red;
+}
+
 .face img {
     height: 300px;
     width: 100%;

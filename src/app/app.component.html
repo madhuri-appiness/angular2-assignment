@@ -15,24 +15,33 @@
                 </div>
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="text" class="form-control" [(ngModel)]="data.email" name="email">
-                </div>
-                <button type="button" (click)="formSubmit()">Login</button>
 
-            </div>
-
-        </div>
-        <div class="flip-holder">
-            <div id="toss">
-                <div id="rev">
-                    <div class="face">
-                        <img src="/assets/images/one.jpg" />
-                    </div>
-                    <div class="face back">
-                        <img src="/assets/images/two.jpg" />
+                    <input type="text" class="form-control" [(ngModel)]="data.email" name="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" #email="ngModel">
+                    <div [hidden]="email.valid || email.pristine" class="alert">
+                        <div [hidden]="!email.hasError('required')">Email is required</div>
+                        <div [hidden]="!email.hasError('pattern')">Email should be valid
+                        </div>
                     </div>
                 </div>
+
+                <button class="btn btn-primary" type="button" (click)="formSubmit()">Login</button>
+
+            </div>
+            <div class="col-md-6">
+                <div class="flip-holder">
+                    <div id="toss">
+                        <div id="rev">
+                            <div class="face">
+                                <img src="/assets/images/one.jpg" />
+                            </div>
+                            <div class="face back">
+                                <img src="/assets/images/two.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
     </div>
 </section>

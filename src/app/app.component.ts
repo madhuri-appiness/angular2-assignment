@@ -9,7 +9,7 @@ export const config = {
     storageBucket: "assignment-20fa8.appspot.com",
     messagingSenderId: "405633600522"
 };
-// import { AngularFire,AuthProviders,AuthMethods, FirebaseListObservable } from 'angularfire2';
+
 export const ACCESS_CONFIG = firebase.initializeApp(config);
 
 const rootRef = ACCESS_CONFIG.database().ref().child("assignment-20fa8");
@@ -46,6 +46,7 @@ export class AppComponent {
     }
     database.set(arr);
    });
+   console.log(this.data);
   // database.set([this.data]);
   //  
  }
