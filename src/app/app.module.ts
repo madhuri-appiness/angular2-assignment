@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from 'angularfire2';
 
 import * as firebase from 'firebase';
-import { loadavg } from 'os';
+// import { loadavg } from 'os';
 
 
 
